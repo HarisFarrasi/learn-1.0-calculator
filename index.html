@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Scientific iPhone Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" disabled>
+        <div class="buttons">
+            <!-- Baris fungsi tambahan -->
+            <button class="function-button" onclick="clearResult()">AC</button>
+            <button class="function-button" onclick="negate()">±</button>
+            <button class="function-button" onclick="appendNumber('%')">%</button>
+            <button class="operator-button" onclick="appendNumber('/')">÷</button>
+            <button class="function-button" onclick="appendNumber('Math.PI')">π</button>
+            <button class="function-button" onclick="appendNumber('Math.E')">e</button>
+            <button class="function-button" onclick="appendFunction('Math.sqrt')">√</button>
+            <button class="operator-button" onclick="appendNumber('**')">^</button>
+            <button class="function-button" onclick="appendFunction('Math.sin')">sin</button>
+            <button class="function-button" onclick="appendFunction('Math.cos')">cos</button>
+            <button class="function-button" onclick="appendFunction('Math.tan')">tan</button>
+            <button class="function-button" onclick="appendFunction('Math.log')">log</button>
+            
+            <!-- Baris angka dan operator dasar -->
+            <button class="number-button" onclick="appendNumber('7')">7</button>
+            <button class="number-button" onclick="appendNumber('8')">8</button>
+            <button class="number-button" onclick="appendNumber('9')">9</button>
+            <button class="operator-button" onclick="appendNumber('*')">×</button>
+            
+            <button class="number-button" onclick="appendNumber('4')">4</button>
+            <button class="number-button" onclick="appendNumber('5')">5</button>
+            <button class="number-button" onclick="appendNumber('6')">6</button>
+            <button class="operator-button" onclick="appendNumber('-')">−</button>
+            
+            <button class="number-button" onclick="appendNumber('1')">1</button>
+            <button class="number-button" onclick="appendNumber('2')">2</button>
+            <button class="number-button" onclick="appendNumber('3')">3</button>
+            <button class="operator-button" onclick="appendNumber('+')">+</button>
+            
+            <!-- Baris bawah -->
+            <button class="number-button zero" onclick="appendNumber('0')">0</button>
+            <button class="number-button" onclick="appendNumber('.')">.</button>
+            <button class="operator-button" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
